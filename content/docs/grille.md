@@ -10,30 +10,30 @@ Une grille en design interactif, souvent appelée "grille de mise en page" ou "g
 ### Structure visuelle cohérente
 Une grille permet de créer une structure visuelle cohérente sur un site web. Cela signifie que les éléments tels que les en-têtes, les menus, le contenu principal et les pieds de page sont placés de manière prévisible, ce qui facilite la navigation pour les utilisateurs. Une structure cohérente aide également à renforcer la marque et l'identité visuelle d'un site.
 
-Source : https://bootcamp.uxdesign.cc/the-power-of-the-8pt-grid-system-in-design-1c9dbc683ad8
+[Source](https://bootcamp.uxdesign.cc/the-power-of-the-8pt-grid-system-in-design-1c9dbc683ad8)
 
 ### Alignement précis
 Une grille permet d'aligner précisément les éléments sur la page, garantissant que les espacements, les marges et les dimensions sont uniformes. Cela crée une esthétique propre et professionnelle, ce qui améliore l'expérience utilisateur.
 
-Source : https://bootcamp.uxdesign.cc/the-importance-of-grid-systems-in-ui-ux-design-enhancing-user-experience-ff7d0a90b08e
+[Source](https://bootcamp.uxdesign.cc/the-importance-of-grid-systems-in-ui-ux-design-enhancing-user-experience-ff7d0a90b08e)
 
 ### Flexibilité responsive
 
 Les grilles sont essentielles pour concevoir des sites web réactifs, qui s'adaptent à différents appareils et tailles d'écran. Une grille responsive permet de réorganiser les éléments de la page de manière à ce qu'ils s'ajustent automatiquement pour offrir une expérience optimale sur les ordinateurs de bureau, les tablettes et les smartphones.
 
-Source : https://www.smashingmagazine.com/2020/01/understanding-css-grid-container/
+[Source](https://www.smashingmagazine.com/2020/01/understanding-css-grid-container/)
 
 ### Hiérarchie de l'information
 
 Une grille aide à définir la hiérarchie de l'information sur une page web. Les éléments importants peuvent être placés plus en évidence, tandis que les éléments moins importants peuvent être relégués vers le bas de la page. Cela guide l'attention des utilisateurs et améliore la lisibilité.
 
-Source : https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids/
+[Source](https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids/)
 
 ### Conformité aux normes de conception
 
 Les grilles sont conformes aux normes de conception web et d'accessibilité, ce qui signifie qu'elles contribuent à rendre un site plus convivial pour tous les utilisateurs, y compris ceux ayant des besoins spécifiques.
 
-Source : https://www.w3.org/TR/css-grid-1/
+[Source](https://www.w3.org/TR/css-grid-1/)
 
 ### Conclusion
 
