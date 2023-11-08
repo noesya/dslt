@@ -24,7 +24,6 @@ layout: hextra-home
 {{< hextra/hero-button text="Démarrer" link="docs" >}}
 </div>
 
-
 <div class="mt-6"></div>
 
 {{< hextra/feature-grid >}}
