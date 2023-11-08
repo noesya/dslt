@@ -15,7 +15,7 @@ weight: 3
 </div>
 ```
 
-```sass {filename="mixins.sass"}
+```scss {filename="mixins.sass"}
 @mixin grid($cols: 12, $gap-y: $grid-gutter, $gap-x: $grid-gutter)
     word-break: break-word
     display: grid
@@ -24,7 +24,7 @@ weight: 3
 ```
 
 
-```sass {filename="functions.sass"}
+```scss {filename="functions.sass"}
 // This must be used for content inside columns
 @function col($quantity, $base: 12)
     $quantity-on-base: $quantity / $base * 12
