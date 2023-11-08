@@ -40,11 +40,9 @@ Source : https://www.w3.org/TR/css-grid-1/
 En résumé, une grille en design interactif est un outil fondamental pour créer des designs web esthétiquement agréables, cohérents et fonctionnels. Elle facilite la conception, l'alignement et l'adaptabilité tout en améliorant l'expérience de l'utilisateur. Les sources que j'ai fournies vous donneront davantage d'informations sur ces concepts et leur application.
 
 
-
-
-
-
 ## La grille du DSLT
+
+### Design
 
 ![Grille de 12 colonnes](/images/grille/grille.png)
 
@@ -57,6 +55,8 @@ En résumé, une grille en design interactif est un outil fondamental pour crée
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
+### Code HTML 
+
 ```html {filename="HTML"}
 <div class="container grid">
   <div>Une première colonne<div>
@@ -65,6 +65,8 @@ En résumé, une grille en design interactif est un outil fondamental pour crée
 </div>
 ```
 
+### Code CSS
+
 ```scss {filename="mixins.sass"}
 @mixin grid($cols: 12, $gap-y: $grid-gutter, $gap-x: $grid-gutter)
     word-break: break-word
@@ -72,7 +74,6 @@ En résumé, une grille en design interactif est un outil fondamental pour crée
     grid-gap: $gap-y $gap-x
     grid-template-columns: repeat($cols, 1fr)
 ```
-
 
 ```scss {filename="functions.sass"}
 // This must be used for content inside columns
