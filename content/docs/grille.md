@@ -37,7 +37,7 @@ Les grilles sont conformes aux normes de conception web et d'accessibilité, ce 
 
 ### Conclusion
 
-En résumé, une grille en design interactif est un outil fondamental pour créer des designs web esthétiquement agréables, cohérents et fonctionnels. Elle facilite la conception, l'alignement et l'adaptabilité tout en améliorant l'expérience de l'utilisateur. Les sources que j'ai fournies vous donneront davantage d'informations sur ces concepts et leur application.
+En résumé, une grille en design interactif est un outil fondamental pour créer des designs web esthétiquement agréables, cohérents et fonctionnels. Elle facilite la conception, l'alignement et l'adaptabilité tout en améliorant l'expérience de l'utilisateur.
 
 
 ## La grille du DSLT
