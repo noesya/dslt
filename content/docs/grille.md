@@ -5,7 +5,7 @@ weight: 3
 
 ## Pourquoi une grille ?
 
-Une grille en design interactif, souvent appelée "grille de mise en page" ou "grille de conception", est un élément clé de la conception web et de l'interface utilisateur. Elle sert de structure de base pour organiser et disposer les éléments d'une page web de manière cohérente. Voici quelques raisons pour lesquelles une grille est importante en design interactif, avec des exemples d'URL de sources pour approfondir vos connaissances :
+Une grille en design interactif, souvent appelée "grille de mise en page" ou "grille de conception", est un élément clé de la conception web et de l'interface utilisateur. Elle sert de structure de base pour organiser et disposer les éléments d'une page web de manière cohérente.
 
 ### Structure visuelle cohérente
 Une grille permet de créer une structure visuelle cohérente sur un site web. Cela signifie que les éléments tels que les en-têtes, les menus, le contenu principal et les pieds de page sont placés de manière prévisible, ce qui facilite la navigation pour les utilisateurs. Une structure cohérente aide également à renforcer la marque et l'identité visuelle d'un site.
