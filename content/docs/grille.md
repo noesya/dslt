@@ -7,7 +7,7 @@ weight: 3
 
 ![Grille de 12 colonnes](/images/grille/grille.png)
 
-```html {filename=".html"}
+```html {filename="HTML"}
 <div class="">
 </div>
 ```
