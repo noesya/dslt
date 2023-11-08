@@ -10,8 +10,7 @@ layout: hextra-home
 
 <div class="mt-6 mb-6">
 {{< hextra/hero-headline >}}
-  Design System <br class="sm:block hidden">
-  Le Temps 
+  Design System Le Temps 
 {{< /hextra/hero-headline >}}
 </div>
 
