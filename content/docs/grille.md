@@ -10,24 +10,24 @@ Une grille en design interactif, souvent appelée "grille de mise en page" ou "g
 ### Structure visuelle cohérente
 Une grille permet de créer une structure visuelle cohérente sur un site web. Cela signifie que les éléments tels que les en-têtes, les menus, le contenu principal et les pieds de page sont placés de manière prévisible, ce qui facilite la navigation pour les utilisateurs. Une structure cohérente aide également à renforcer la marque et l'identité visuelle d'un site.
 
-Source : https://uxdesign.cc/the-8pt-grid-an-overview-tutorial-9f4f4a6c2df
+Source : https://bootcamp.uxdesign.cc/the-power-of-the-8pt-grid-system-in-design-1c9dbc683ad8
 
 ### Alignement précis
 Une grille permet d'aligner précisément les éléments sur la page, garantissant que les espacements, les marges et les dimensions sont uniformes. Cela crée une esthétique propre et professionnelle, ce qui améliore l'expérience utilisateur.
 
-Source : https://uxdesign.cc/the-benefits-of-using-a-grid-in-design-8a51b2a6c650
+Source : https://bootcamp.uxdesign.cc/the-importance-of-grid-systems-in-ui-ux-design-enhancing-user-experience-ff7d0a90b08e
 
 ### Flexibilité responsive
 
 Les grilles sont essentielles pour concevoir des sites web réactifs, qui s'adaptent à différents appareils et tailles d'écran. Une grille responsive permet de réorganiser les éléments de la page de manière à ce qu'ils s'ajustent automatiquement pour offrir une expérience optimale sur les ordinateurs de bureau, les tablettes et les smartphones.
 
-Source : https://www.smashingmagazine.com/2019/02/understanding-css-grid-container/
+Source : https://www.smashingmagazine.com/2020/01/understanding-css-grid-container/
 
 ### Hiérarchie de l'information
 
 Une grille aide à définir la hiérarchie de l'information sur une page web. Les éléments importants peuvent être placés plus en évidence, tandis que les éléments moins importants peuvent être relégués vers le bas de la page. Cela guide l'attention des utilisateurs et améliore la lisibilité.
 
-Source : https://uxdesign.cc/how-to-use-grid-layouts-to-create-better-user-experiences-66de2f02ec8a
+Source : https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids/
 
 ### Conformité aux normes de conception
 
