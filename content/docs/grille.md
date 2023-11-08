@@ -48,6 +48,15 @@ En résumé, une grille en design interactif est un outil fondamental pour crée
 
 ![Grille de 12 colonnes](/images/grille/grille.png)
 
+{{< filetree/container >}}
+  {{< filetree/folder name="letemps" >}}
+    {{< filetree/folder name="tools" >}}
+      {{< filetree/file name="functions.sass" >}}
+      {{< filetree/file name="mixins.sass" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
 ```html {filename="HTML"}
 <div class="container grid">
   <div>Une première colonne<div>
