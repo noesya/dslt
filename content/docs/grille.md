@@ -7,15 +7,38 @@ weight: 3
 
 ![Grille de 12 colonnes](/images/grille/grille.png)
 
-```html {filename=".html"}
-<div class="">
+```html
+<div class="container grid">
+  <div>Une première colonne<div>
+  <div>Une deuxième colonne<div>
+  ...
 </div>
 ```
 
-```sass {filename="grid.sass"}
-body
-  color: black
+```sass {filename="mixins.sass"}
+@mixin grid($cols: 12, $gap-y: $grid-gutter, $gap-x: $grid-gutter)
+    word-break: break-word
+    display: grid
+    grid-gap: $gap-y $gap-x
+    grid-template-columns: repeat($cols, 1fr)
 ```
+
+
+```sass {filename="functions.sass"}
+// This must be used for content inside columns
+@function col($quantity, $base: 12)
+    $quantity-on-base: $quantity / $base * 12
+    $width: calc( (100% + #{$grid-gutter}) / 12 * #{$quantity-on-base} - #{$grid-gutter} )
+    @return #{$width}
+
+// This must be used for offset, outside columns
+@function offset($quantity, $base: 12)
+    $quantity-on-base: $quantity / $base * 12
+    $width: calc( (100% + #{$grid-gutter}) / 12 * #{$quantity-on-base} )
+    @return #{$width}
+```
+
+
 
 ## Unités d'espacement
 
