@@ -16,9 +16,7 @@ layout: hextra-home
 
 <div class="mb-12">
 {{< hextra/hero-subtitle >}}
-  Assurer la cohérence visuelle 
-  <br class="sm:block hidden">
-  et la flexibilité de conception
+  Assurer la cohérence visuelle et la flexibilité de conception
 {{< /hextra/hero-subtitle >}}
 </div>
 
