@@ -44,3 +44,6 @@ params:
       link: /
       width: 150
       height: 40
+  editURL:
+    enable: true
+    base: "https://github.com/noesya/dslt/edit/main/content"
