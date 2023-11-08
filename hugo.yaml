@@ -3,6 +3,7 @@ languageCode: fr
 title: 'DSLT'
 theme: hextra
 
+defaultContentLanguage: fr
 enableRobotsTXT: true
 enableGitInfo: true
 
@@ -20,6 +21,9 @@ menu:
     - name: Documentation
       pageRef: /docs
       weight: 1
+    - name: Pourquoi un design system ?
+      pageRef: /pourquoi
+      weight: 2
     - name: Recherche
       weight: 4
       params:
