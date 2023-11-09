@@ -49,11 +49,23 @@ En résumé, une grille en design interactif est un outil fondamental pour crée
 ### Balisage HTML 
 
 ```html {filename="HTML"}
-<div class="container grid">
-  <div>Une première colonne<div>
-  <div>Une deuxième colonne<div>
+<div class="container grid exemple-grid">
+  <div class="element-1">Une première colonne<div>
+  <div class="element-2">Une deuxième colonne<div>
   ...
 </div>
+```
+
+```scss
+.grid
+  @include grid()
+
+.element-1
+  @include col(4)
+
+.element-2
+  @include col(8)
+
 ```
 
 ### Feuilles de styles
