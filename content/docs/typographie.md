@@ -23,7 +23,10 @@ Ces noms existent dans plusieurs langues, dont le français, mais il semble plus
 
 Les tailles de police ci-dessous sont indiquées en pixels, mais nous les convertissons ensuite en rem, ce qui permet aux utilisateurs et utilisatrices de redimensionner sans problème la taille de la police, en plus de créer d'uniformiser les textes pour chaque contexte d’utilisation.
 
-| Dénommination    | Utilisation                         | Taille (large) | Hauteur de ligne |
-| ---------------- | ----------------------------------- | -------------- | ---------------- |
-| Double Canon     | Titres des articles                 | 58px           | 56px             |
-| Small Canon      | Hero et chapo des pages et articles | 40px           | 40px             |
+| Dénommination    | Taille (large) | Hauteur de ligne |
+| ---------------- | -------------- | ---------------- |
+| Double Canon     | 58px           | 56px             |
+| Small Canon      | 40px           | 40px             |
+| Trafalgar        | 32px           | 36px             |
+| Paragon          | 28px           | 32px             |
+| Double Pica      | 24             | 26               |
