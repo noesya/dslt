@@ -29,4 +29,7 @@ Les tailles de police ci-dessous sont indiquées en pixels, mais nous les conver
 | Small Canon      | 40px           | 40px             |
 | Trafalgar        | 32px           | 36px             |
 | Paragon          | 28px           | 32px             |
-| Double Pica      | 24             | 26               |
+| Double Pica      | 24px           | 26px             |
+| Pica             | 18px           | 18px             |
+| Long Primer      | 14px           | 18px             |
+| Minion           | 12px           | 16px             |
