@@ -23,13 +23,15 @@ Ces noms existent dans plusieurs langues, dont le français, mais il semble plus
 
 Les tailles de police ci-dessous sont indiquées en pixels, mais nous les convertissons ensuite en rem, ce qui permet aux utilisateurs et utilisatrices de redimensionner sans problème la taille de la police, en plus de créer d'uniformiser les textes pour chaque contexte d’utilisation.
 
-| Dénommination    | Taille (large) | Hauteur de ligne |
-| ---------------- | -------------- | ---------------- |
-| Double Canon     | 58px           | 56px             |
-| Small Canon      | 40px           | 40px             |
-| Trafalgar        | 32px           | 36px             |
-| Paragon          | 28px           | 32px             |
-| Double Pica      | 24px           | 26px             |
-| Pica             | 18px           | 18px             |
-| Long Primer      | 14px           | 18px             |
-| Minion           | 12px           | 16px             |
+Pour chaque système typographique, nous indicons la taille de la police et la hauteur de la ligne, de cette façon : `font-size`/`line-height`.
+
+| Dénommination    | Large     | Medium    | Extra small |
+| ---------------- | --------- | --------- | ----------- |
+| Double Canon     | 58/56     |           |             |
+| Small Canon      | 40/40     |           |             |
+| Trafalgar        | 32/36     |           |             |
+| Paragon          | 28/32     |           |             |
+| Double Pica      | 24/26     |           |             |
+| Pica             | 18/18     |           |             |
+| Long Primer      | 14/18     |           |             |
+| Minion           | 12/16     |           |             |
