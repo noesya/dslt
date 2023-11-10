@@ -7,9 +7,9 @@ weight: 2
 
 Pour que la lecture du contenu du site soit optimale, peu importe la taille de l’écran utilisé, nous divisons nos systèmes typographiques en trois sections : large, medium et extra small.
 
-`Large` correspond à un écran d’une taille supérieure ou égale à 1280px.
-`Medium` correspond à un écran d’une taille comprise entre la référence large et 768px.
-`Extra small` correspond aux écrans d’une taille inférieure à la référence medium.
+`Large` correspond à un écran d’une taille supérieure ou égale à 1280px (pour les écrans d'ordinateur).
+`Medium` correspond à un écran d’une taille comprise entre la référence large et 768px (pour les tablettes ou les téléphones à l'horizontale).
+`Extra small` correspond aux écrans d’une taille inférieure à la référence medium (principalement ceux de téléphones).
 
 ## Conventions de nommage
 
