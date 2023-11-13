@@ -40,7 +40,7 @@ Pour chaque système typographique, nous indicons la taille de la police et la h
 
 ## Exemple d'utilisation
 
-![Exemple : Les typographies sur un article](/images/typography/typo-01.png)
+![Exemple : Les typographies sur un article](/images/typography/typo-01.jpg)
 ## Emploi technique
 
 Afin de pouvoir utiliser nos typographies facilement dans plusieurs contexte de lecture, nous employons du SCSS, à la racine de notre document HTML, pour définir le même ensemble de polices que celui listé dans le tableau ci-dessus, dans un fichier de configuration :
