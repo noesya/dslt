@@ -191,3 +191,5 @@ Ce qui correspond, dans le style du site (en terme de typographie uniquement), a
   font-weight: $meta-weight
   @include type-size(minion)
 ```
+
+On se retrouve donc avec un équilibre entre des variables définies en SASS (`font-family`et `font-weight`) et celles utilisées grâce au mixin `type-size`. Ces deux usages nous permettent d'obtenir un design system cohérent et adaptable en fonction des besoins et des contextes.
