@@ -41,6 +41,81 @@ Pour chaque système typographique, nous indicons la taille de la police et la h
 ## Exemple d'utilisation
 
 ![Exemple : Les typographies sur un article](/images/typography/typo-01.jpg)
+
+Ce qui correspond, dans le code du site, à ceci :
+
+{{< filetree/container >}}
+  {{< filetree/folder name="letemps" >}}
+    {{< filetree/folder name="articles" >}}
+      {{< filetree/file name="show.html.erb" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+```html {filename="show.html.erb"}
+<div class="container">
+  <div class="article-header">
+    <%= render '/articles/breadcrumb', article: @article %>
+
+    <h1><%= @article.title %></h1>
+
+    <% if @article.description? %>
+      <div class="lead">
+        <%= markdown @article.description %>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="article-media">
+    <figure class="post__cover is-16-9">
+      <picture>
+        <%= render 'articles/photo_sources_large', photo: @article.photo %>
+        <img src="<%= large_photo_cdn_url(@article.photo) %>" alt="<%= @article.photo_caption if @article.photo_caption.present? %>" />
+      </picture>
+      <% if @article.photo_caption.present? %>
+        <figcaption><%= @article.photo_caption %></figcaption>
+      <% end %>
+    </figure>
+  </div>
+
+  <div class="article-authors">
+    <%# TODO: Move to controller authors %>
+    <% authorships = @article.authorships.order_by_position_and_name %>
+    <% authorships.each do |authorship| %>
+      <% author = authorship.author %>
+      <div class="author">
+        <figure>
+          <picture class="avatar">
+            <img src="<%= small_photo_cdn_url(author.photo) %>" alt="<%= author.name %>" title="<%= author.name %>"/>
+          </picture>
+        </figure>
+        <%= link_to "#{author.first_name} #{author.last_name}", author %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="article-meta">
+    <time class="article-date"><%= format_article_date @article %></time>
+    <div class="article-actions">
+      <%= render '/articles/buttons', article: @article %>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <% if @article.links? %>
+      <div class="article-links">
+        <%= markdown @article.links %>
+      </div>
+    <% end %>
+
+    <%= @article.formatted_short_body %>
+    <%#= markdown(@article.split_body[:body]) %>
+    <%= render @article.template_path('body'), article: @article %>
+    <%= render '/articles/deeper', article: @article, deeper_open: true %>
+  </div>
+  ...
+```
+
 ## Emploi technique
 
 Afin de pouvoir utiliser nos typographies facilement dans plusieurs contexte de lecture, nous employons du SCSS, à la racine de notre document HTML, pour définir le même ensemble de polices que celui listé dans le tableau ci-dessus, dans un fichier de configuration :
