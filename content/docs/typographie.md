@@ -79,7 +79,6 @@ Ce qui correspond, dans le code du site, à ceci :
   </div>
 
   <div class="article-authors">
-    <%# TODO: Move to controller authors %>
     <% authorships = @article.authorships.order_by_position_and_name %>
     <% authorships.each do |authorship| %>
       <% author = authorship.author %>
