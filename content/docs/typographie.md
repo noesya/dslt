@@ -38,83 +38,6 @@ Pour chaque système typographique, nous indicons la taille de la police et la h
 | Long Primer      | 14/18     |              |
 | Minion           | 12/16     |              |
 
-## Exemple d'utilisation
-
-![Exemple : Les typographies sur un article](/images/typography/typo-01.jpg)
-
-Ce qui correspond, dans le code du site, à ceci :
-
-{{< filetree/container >}}
-  {{< filetree/folder name="letemps" >}}
-    {{< filetree/folder name="articles" >}}
-      {{< filetree/file name="show.html.erb" >}}
-    {{< /filetree/folder >}}
-  {{< /filetree/folder >}}
-{{< /filetree/container >}}
-
-```html {filename="show.html.erb"}
-<div class="container">
-  <div class="article-header">
-    <%= render '/articles/breadcrumb', article: @article %>
-
-    <h1><%= @article.title %></h1>
-
-    <% if @article.description? %>
-      <div class="lead">
-        <%= markdown @article.description %>
-      </div>
-    <% end %>
-  </div>
-  
-  <div class="article-media">
-    <figure class="post__cover is-16-9">
-      <picture>
-        <%= render 'articles/photo_sources_large', photo: @article.photo %>
-        <img src="<%= large_photo_cdn_url(@article.photo) %>" alt="<%= @article.photo_caption if @article.photo_caption.present? %>" />
-      </picture>
-      <% if @article.photo_caption.present? %>
-        <figcaption><%= @article.photo_caption %></figcaption>
-      <% end %>
-    </figure>
-  </div>
-
-  <div class="article-authors">
-    <% authorships = @article.authorships.order_by_position_and_name %>
-    <% authorships.each do |authorship| %>
-      <% author = authorship.author %>
-      <div class="author">
-        <figure>
-          <picture class="avatar">
-            <img src="<%= small_photo_cdn_url(author.photo) %>" alt="<%= author.name %>" title="<%= author.name %>"/>
-          </picture>
-        </figure>
-        <%= link_to "#{author.first_name} #{author.last_name}", author %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="article-meta">
-    <time class="article-date"><%= format_article_date @article %></time>
-    <div class="article-actions">
-      <%= render '/articles/buttons', article: @article %>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <% if @article.links? %>
-      <div class="article-links">
-        <%= markdown @article.links %>
-      </div>
-    <% end %>
-
-    <%= @article.formatted_short_body %>
-    <%#= markdown(@article.split_body[:body]) %>
-    <%= render @article.template_path('body'), article: @article %>
-    <%= render '/articles/deeper', article: @article, deeper_open: true %>
-  </div>
-  ...
-```
-
 ## Emploi technique
 
 Afin de pouvoir utiliser nos typographies facilement dans plusieurs contexte de lecture, nous employons du SCSS, à la racine de notre document HTML, pour définir le même ensemble de polices que celui listé dans le tableau ci-dessus, dans un fichier de configuration :
@@ -227,3 +150,44 @@ Nous employons ensuite ce mixin aux différents endroits nous intéressant, comm
 Ici, le mixin `type-size` va checher à l'intérieur du fichier `type-sizes.sass` la valeur de police et de hauteur de ligne (si elle est définie) correspondant au nom (ici "double-canon") qu'on lui passe en paramètre.
 
 Cette méthode permet de gérer directement les différents contextes de visionnage du site, mais aussi de garder un nommage cohérent des différentes tailles de police.
+
+## Exemple d'utilisation
+
+![Exemple : Les typographies sur un article](/images/typography/typo-01.jpg)
+
+Ce qui correspond, dans le style du site (en terme de typographie uniquement), au style du fichier suivant :
+
+{{< filetree/container >}}
+  {{< filetree/folder name="letemps" >}}
+    {{< filetree/folder name="articles" >}}
+      {{< filetree/file name="show.sass" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+```scss {filename="show.sass"}
+.articles-show
+  .article-header, .article-authors, .article-meta, .article-body
+    .lead
+      font-family: $lead-font-family
+      font-size: $lead-size
+      font-weight: $lead-weight
+      @include type-size(body-copy)
+  .article-meta
+    font-family: $meta-font-family
+    font-weight: $meta-weight
+    @include type-size(minion)
+  .article-body
+    font-family: $article-body-font-family
+    font-weight: $article-body-weight
+    @include type-size(body-copy)
+  .article-links
+    font-family: $article-body-font-family
+    font-weight: $article-body-weight
+    @include type-size(body-copy)
+
+.article-date
+  font-family: $meta-font-family
+  font-weight: $meta-weight
+  @include type-size(minion)
+```
