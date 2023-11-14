@@ -13,6 +13,6 @@ title: Documentation
             >}}
   {{< card  link="typographie" 
             title="Typographie" 
-            image="/images/typography/typo-01.jpg"
+            image="/images/typography/typo-02.png"
             >}}
 {{< /cards >}}
