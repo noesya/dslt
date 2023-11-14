@@ -9,10 +9,10 @@ title: Documentation
             >}}
   {{< card  link="espaces" 
             title="Espaces" 
-            image="/images/spaces/spaces.png"
+            image="/images/spaces/spaces.jpg"
             >}}
   {{< card  link="typographie" 
             title="Typographie" 
-            image="/images/typography/typo-01.png"
+            image="/images/typography/typo-01.jpg"
             >}}
 {{< /cards >}}
