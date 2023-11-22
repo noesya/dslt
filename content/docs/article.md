@@ -24,7 +24,7 @@ Quand un article est dans une grille, ou liste et qu'il n'est pas le sujet princ
 
 ## Gabarits (ou Genre)
 
-Il existe différents gabarits d'article.
+Pour s'adapter aux usages et divers contenus, la rédaction dispose de différents gabarits d'article.
 
 ### Article (par défaut)
 
