@@ -11,6 +11,11 @@ Pour que la lecture du contenu du site soit optimale, peu importe la taille de l
 `Medium` correspond à un écran d’une taille comprise entre la référence large et 768px (pour les tablettes ou les téléphones à l'horizontale).
 `Extra small` correspond aux écrans d’une taille inférieure à la référence medium (principalement ceux de téléphones).
 
+### Familles
+
+Nommer les familles par leur nature et non pas par leurs usages.
+
+
 ### Conventions de nommage
 
 Plutôt que de créer des ensemble de valeurs typographiques correspondant aux utilisations principales (par exemple : h1, h2, lead), il semble plus pérenne de nommer ces ensembles selon les normes typographiques traditionnelles. Ces conventions s’appliquaient en fonction de la hauteur en point d’une police et fournissent des nom spécifiques à chaque taille.
