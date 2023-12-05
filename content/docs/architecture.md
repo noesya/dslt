@@ -5,7 +5,7 @@ weight: 3
 
 ## Architecture
 
-### Core-System :
+### System coeur :
 
 Les grandes règles et utilitaires CSS. 
 
@@ -18,7 +18,7 @@ Thème par défaut Spyri (Heidi, Kometa, Geneva).
 Thème pour le Temps.
 
 ```
-      core-system
+      system-coeur
            |
           / \
          /   \
