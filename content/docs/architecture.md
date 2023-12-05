@@ -5,9 +5,16 @@ weight: 3
 
 ## Architecture
 
-### System coeur :
+### Système cœur :
 
-Les grandes règles et utilitaires CSS. 
+Les grandes règles et utilitaires CSS : 
+- Grilles
+- Typographique
+- Couleurs sémantiques
+- Gestion des icônes
+- Breakpoints
+- Espacements (4px)
+- Composants
 
 ### Thème defaut :
 
@@ -28,5 +35,5 @@ Thème pour le Temps.
                     / | \
                    /  |  \
                   /   |   \
-            Geneva  Heidi  Kometa
+        Geneva (?)  Heidi  Kometa
 ```
