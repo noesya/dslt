@@ -17,6 +17,7 @@ Thème par défaut Spyri (Heidi, Kometa, Geneva).
 
 Thème pour le Temps.
 
+```
       core-system
            |
           / \
@@ -28,4 +29,4 @@ Thème pour le Temps.
                    /  |  \
                   /   |   \
             Geneva  Heidi  Kometa
-                    
+```
