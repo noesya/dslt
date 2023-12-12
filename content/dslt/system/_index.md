@@ -10,4 +10,8 @@ L'objectif est d'obtenir un ensemble, un **système** qui puisse s'appliquer aux
 stateDiagram-v2
     Système --> LeTemps
     Système --> Thème
+    Thème --> Geneva
+    Thème --> Heidi
+    Thème --> Kometa
+    LeTemps --> Site
 ```
