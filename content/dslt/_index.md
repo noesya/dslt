@@ -35,3 +35,6 @@ layout: hextra-home
   >}}
 {{< /hextra/feature-grid >}}
 
+## Ressources
+
+- L'intégralité du design est disponible et visible sur [Figma](https://www.figma.com/file/TCIWZid2yVpz05VOt72Azq/DSLT?type=design&node-id=0%3A1&mode=design&t=m5UbnUNG4ewQNNdc-1).
