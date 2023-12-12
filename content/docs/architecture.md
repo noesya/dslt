@@ -5,7 +5,7 @@ weight: 3
 
 ## Architecture
 
-### Système cœur :
+### DSLT (core system)
 
 Les grandes règles et utilitaires CSS : 
 - Grilles
@@ -16,28 +16,26 @@ Les grandes règles et utilitaires CSS :
 - Espacements (4px)
 - Composants
 
-### Thème defaut :
+### Thèmes
 
-Thème par défaut Spyri (Heidi, Kometa, Geneva).
-
-### Thème Le Temps :
-
-Thème pour le Temps.
-
-```
-      system-coeur
-           |
-          / \
-         /   \
-        /     \
-  Le Temps    Spyri-theme (default)
-                      |
-                    / | \
-                   /  |  \
-                  /   |   \
-        Geneva (?)  Heidi  Kometa
+Sans thème Spyri
+```mermaid
+graph TD;
+    DSLT-->LT(Le Temps);
+    DSLT-->Heidi;
+    DSLT-->Kometa;
+    DSLT-->Geneva;
 ```
 
+Avec thème Spyri
+```mermaid
+graph TD;
+    DSLT-->LT(Le Temps);
+    DSLT-->Spyri;
+    Spyri-->Heidi;
+    Spyri-->Kometa;
+    Spyri-->Geneva;
+```
 
 ## Arborescence 
 
