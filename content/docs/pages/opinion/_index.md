@@ -1,3 +1,4 @@
 ---
 title: Opinion
 ---
+![](teaser.png)

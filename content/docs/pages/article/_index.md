@@ -3,7 +3,7 @@ title: Article
 ---
 
 ## Teasers
-![Image petit](teaser-image-petit.png)
-![Image](teaser-image.png)
-![Texte](teaser-texte.png)
-![Texte abo](teaser-texte-abo.png)
+![](teaser-image-petit.png)
+![](teaser-image.png)
+![](teaser-texte.png)
+![](teaser-texte-abo.png)
