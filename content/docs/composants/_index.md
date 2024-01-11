@@ -1,4 +1,4 @@
 ---
 title: Composants
-weight: 3
+weight: 2
 ---
