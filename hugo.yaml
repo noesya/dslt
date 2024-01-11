@@ -35,6 +35,9 @@ menu:
         icon: github
 
 params:
+  theme:
+    default: dark
+    displayToggle: false
   navbar:
     displayTitle: true
     displayLogo: true
