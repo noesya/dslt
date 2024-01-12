@@ -16,6 +16,9 @@ title: Fil d'ariane
 </nav>
 ```
 
+{{< callout type="error" >}}`aria-label` devrait être en français{{< /callout >}}
+{{< callout type="error" >}}Il manque les microformats{{< /callout >}}
+
 ## Avec abonnement
 
 ![](desktop-abo.png)
@@ -37,3 +40,6 @@ title: Fil d'ariane
   </ol>
 </nav>
 ```
+
+{{< callout type="error" >}}Le fil d'ariane est cassé parce que "Réservé aux abonnés" n'en fait pas partie sur le plan sémantique. Cela a un effet de bord sur le dernier mot qui devrait être en gris, mais qui est en rouge.{{< /callout >}}
+{{< callout type="error" >}}Le svg alourdit le DOM pour rien, il devrait être externe et caché{{< /callout >}}
