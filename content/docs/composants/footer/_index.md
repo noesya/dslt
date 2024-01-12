@@ -108,6 +108,7 @@ Le Temps, Abonnements et Services, Documents de références
   </ul>
 </nav>
 ```
+{{< callout type="error" >}}Le svg alourdit le DOM pour rien, il devrait être externe et caché{{< /callout >}}
 
 ## Menu à propos
 ![](about.png)
