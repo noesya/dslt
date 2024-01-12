@@ -29,6 +29,8 @@ title: Footer
 </footer>
 ```
 
+{{< callout type="error" >}}Les h2 polluent le plan du document{{< /callout >}}
+
 ## Menus contact
 Le Temps, Abonnements et Services, Documents de références
 
