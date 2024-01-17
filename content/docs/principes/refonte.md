@@ -6,12 +6,51 @@ weight: 1
 ## Vues
 
 ### Imbrications
-Structure de fichiers (multiples inclusions de partiels, nommage, ...)
-2 exemples d’inclusions multiple
+
+Exemple de structure sur la home.  
+Sur Heidi on a quelque chose de relativement propre et cohérent : 
+```
+pages/index.html.erb
+  -> render 'pages/home/featured_articles'
+    -> render 'pages/home/featured_article'
+      -> render 'articles/photo_sources'
+      -> render 'articles/meta'
+      -> render 'articles/premium'
+    -> render 'pages/home/featured_article_nocover'
+      -> render 'articles/meta'
+      -> render 'articles/premium'
+```
+
+On voit ici que le `featured_article` et le `featured_article_nocover` pourraient être factorisés (on peut passer un paramètre 'cover: false' au partial featured_article), mais sinon la structure est plutôt logique.  
+
+Sur Le Temps ça devient ça :
+```
+pages/index.html.erb
+  -> render 'pages/home/featured_articles'
+    -> render 'pages/home/featured_article_title_lead'
+    -> render 'articles/photo_sources_large'
+    -> render '/articles/post_genre_icon'
+    -> render 'articles/premium'
+    -> render "articles/authors_list"
+    -> render "articles/sponsors_small"
+    -> render 'pages/home/featured_article_small_image'
+    -> render 'pages/home/featured_opinions_authors'
+    -> render 'pages/home/featured_article_region
+    -> render 'pages/home/featured_article'
+      -> render "articles/templates/default/preview"
+        -> render 'articles/photo_sources_large'
+        -> render '/articles/post_genre_icon'
+        -> render 'articles/premium'
+        -> render "articles/authors_list"
+        -> render "articles/sponsors_small"
+```
+et là on ne comprend plus rien. Les partial sont nommés en dehors du sens, avec des informations de taille ('large', 'small'). On à des niveaux différents les même inclusions. Bref on s'y perd !
 
 ### Répétitions
-multiples répétitions (manque de “composants”) 
-2 exemples
+
+Sur les auteurs par exemple on a 3 partial différents :  `articles/authors_list`, `articles/authors_with_pictures`, `articles/authors`. Les 3 sont censés afficher une liste d'auteurs. Les 3 sont balisés `<div class="post__author">`. Visiblement c'est la même chose (afficher les auteurs) mais dans des contextes différents (avec plus ou moins de détails). Il faut factoriser.  
+Même principe pour `articles/premium` et `articles/premium-text`.  
+Sur Le Temps il y a beaucoup de partiels qui sont dupliqués alors qu'ils devraient "juste" être rendus plus intelligents (contextuels). Chaque duplication de partiel engendre des duplications de balisage et rendent le tout difficile à maintenir.
 
 ## DOM
 
