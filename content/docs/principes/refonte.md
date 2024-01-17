@@ -3,7 +3,7 @@ title: Refonte 2024
 weight: 1
 ---
 
-## Vues trop compliquées
+## Vues
 
 ### Imbrications
 Structure de fichiers (multiples inclusions de partiels, nommage, ...)
@@ -13,7 +13,7 @@ Structure de fichiers (multiples inclusions de partiels, nommage, ...)
 multiples répétitions (manque de “composants”) 
 2 exemples
 
-## Problèmes dans le DOM
+## DOM
 
 ### A11y
 Menu - role aria menuitem faux sur tous les liens de liste de navigation
@@ -29,7 +29,7 @@ Menu - aria-label="secondary" --> le lecteur d'écran va lire "Secondary"
 - sections 
 - balisage en “series” pour la page folder
 
-## CSS trop compliqué
+## CSS
 
 ### Calculs 
 
