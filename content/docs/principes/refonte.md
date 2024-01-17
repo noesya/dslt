@@ -59,4 +59,9 @@ Voilà les valeurs des variables ci-dessus :
 {{< callout type="error" >}}Cette taille est le produit de 7 multiplications en cascade.{{< /callout >}}
 {{< callout type="error" >}}7 directives CSS sont empilées, dont 3 s'appuient sur le même type de calculs.{{< /callout >}}
 
+{{< callout type="info" >}}
+L'échelle modulaire ne correspond ni à un besoin graphique ni à un besoin technique, il suffit de l'enlever pour tout simplifier.
+{{< /callout >}}
+
+
 ### Cloisonnements
