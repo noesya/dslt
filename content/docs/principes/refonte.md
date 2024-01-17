@@ -3,6 +3,11 @@ title: Refonte 2024
 weight: 1
 ---
 
+## 2 approches : 
+
+- Refonte complète :  vues, balisages, style et javascript. On part de zéro pour ne pas avoir de dette technique. 30 à 40 jours de développement.
+- Progressif : nettoyage et factorisation des vues, puis nettoyage du balisage (html). Il faut réussir à ne pas casser en maintenant le style, nécessite plus de passes de tests. Une fois cela ensuite une refonte complète du style. 70 à 80 jours de développement.
+
 ## Vues
 
 ### Imbrications
