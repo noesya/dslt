@@ -35,14 +35,14 @@ Menu - aria-label="secondary" --> le lecteur d'écran va lire "Secondary"
 
 Voilà un exemple de calcul de taille typographique pour un teaser.
 ![](refonte/css-titre.png)
-Et voilà la pile de styles qui s'applique.
+Et voilà la pile de styles qui s'applique :
 ![](refonte/css-style.png)
 
 ```css {filename="CSS"}
 font-size: calc(var(--font-size-110) * var(--font-serif-scale));
 ```
 
-Voilà les valeurs des variables ci-dessus
+Voilà les valeurs des variables ci-dessus :
 ```css {filename="CSS"}
 --font-size-110: calc(var(--font-size-100) * var(--ratio));
 --font-size-100: calc(var(--font-size-90) * var(--ratio));
@@ -56,6 +56,7 @@ Voilà les valeurs des variables ci-dessus
 ```
 
 {{< callout type="error" >}}La taille en desktop est de 40.5457px.{{< /callout >}}
-{{< callout type="error" >}}Cette taille est le produit de 14 multiplications.{{< /callout >}}
+{{< callout type="error" >}}Cette taille est le produit de 7 multiplications en cascade.{{< /callout >}}
+{{< callout type="error" >}}7 directives CSS sont empilées, dont 3 s'appuient sur le même type de calculs.{{< /callout >}}
 
 ### Cloisonnements
