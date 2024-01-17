@@ -1,0 +1,5 @@
+---
+title: Webinaire
+---
+
+![](indicator.png)
