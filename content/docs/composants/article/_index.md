@@ -394,3 +394,5 @@ Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents af
     .article-item__authors
       order: 2
 ```
+
+L'ordre des éléments et le style des titres sont gérés en fonction du contexte, c'est à dire en fonction de l'endroit où le teaser est affiché.
