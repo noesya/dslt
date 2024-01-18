@@ -6,83 +6,122 @@ title: Article
 
 ### Titre 41/40 avec image, auteur et chapô
 
-![Alt text](image-2.png)
+![](image-2.png)
 
 ### Titre 28/32 avec chapô
 
-![Alt text](image.png)
+![](image.png)
 
 ### Titre 23/24 avec chapô
 
-![Alt text](image-1.png)
+![](image-1.png)
 
 ### Titre 20/24 avec chevron
 
-![Alt text](image-3.png)
+![](image-3.png)
 
 ### Titre 23/24 avec image, auteur et chapô
 
-![Alt text](image-4.png)
+![](image-4.png)
 
 ### Titre 23/24 avec auteur mis en avant
 
-![Alt text](image-5.png)
+![](image-5.png)
 
 ### Titre 23/24 avec image et catégorie
 
-![Alt text](image-6.png)
+![](image-6.png)
 
 ### Titre 23/24 avec image, auteur et chapô
 
-![Alt text](image-7.png)
+![](image-7.png)
 
 ### Titre 25/28 avec image et auteur
 
-![Alt text](image-8.png)
+![](image-8.png)
 
 ### Titre 28/32 avec image, auteur et chapô
 
-![Alt text](image-11.png)
+![](image-11.png)
 
 ### Titre 23/24 mode classement
 
-![Alt text](image-9.png)
+![](image-9.png)
+
+### Titre 20/24 mode classement
+
+![Alt text](image-27.png)
 
 ### Titre 25/28 avec image
 
-![Alt text](image-10.png)
+![](image-10.png)
 
 ### Titre 23/28
 
-![Alt text](image-12.png)
+![](image-12.png)
 
+### Titre 46/44 avec image, chapô et date
+
+![](image-23.png)
+
+### Titre 20/24 avec image, chapô et date
+
+![](image-24.png)
+
+### Titre 23/24 avec image et date
+
+![Alt text](image-25.png)
+
+### Titre 23/24 avec image, heure et chapô
+
+![Alt text](image-26.png)
+
+### Titre 23/24 avec image, auteur, chapô et date
+
+![Alt text](image-28.png)
 
 ## Article Podcast
 
 ### Grand teaser accueil
 
-![Alt text](image-13.png)
+![](image-13.png)
 
 ### Grand teaser index
 
-![Alt text](image-14.png)
+![](image-14.png)
 
 ### Teaser grille
 
-![Alt text](image-15.png)
+![](image-15.png)
 
 ### Teaser liste
 
-![Alt text](image-18.png)
+![](image-18.png)
 
 ### Série simple
 
-![Alt text](image-16.png)
+![](image-16.png)
 
 ### Série petit format
 
-![Alt text](image-17.png)
+![](image-17.png)
 
 ## Article Vidéo
+
+### Vidéo très grand teaser
+
+![](image-21.png)
+
+### Vidéo grand teaser
+
+![](image-19.png)
+
+### Vidéo teaser grille
+
+![](image-22.png)
+
+### Vidéo teaser liste
+
+![](image-20.png)
 
 
