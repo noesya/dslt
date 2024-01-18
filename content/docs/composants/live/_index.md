@@ -1,8 +1,7 @@
 ---
-title: Live
+title: En direct
 ---
 
 ![](indicator.png)
-![](desktop.png)
 ![](post.png)
 ![](post-2.png)
