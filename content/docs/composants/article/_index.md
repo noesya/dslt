@@ -4,16 +4,16 @@ title: Article - Teasers
 
 ## Analyse
 
-Il y a une trentaine d'affichage différents pour les teasers. Une grande variété de taille de titres, et des informations optionnelles à afficher.
+Il y a une trentaine d'affichages différents pour les teasers. Une grande variété de tailles de titre, et des informations optionnelles à afficher.
 
-Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents affichages. À notes que certains sont simplement des "passe-plats"
+Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents affichages. À noter que certains sont simplement des "passe-plats".
 
 ```rb {filename="articles/templates/podcast/_preview.html.erb"}
 <!-- defaults to defaults template -->
 <%= render "articles/templates/default/preview", article: article %>
 ```
 
-## Article commun
+## Articles communs (20 styles différents en desktop)
 
 ### Titre 41/40 avec image, auteur et chapô
 
@@ -270,51 +270,57 @@ Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents af
 “Un partiel pour les gouverner tous.“
 
 ```html {filename="app/views/sites/letemps/articles/_teaser.html.erb"}
-<% hide_image ||= false %>
-<% hide_description ||= false %>
-<% show_date ||= false %>
-<% show_time ||= false %>
-<% show_authors ||= false %>
-<% show_category ||= false %>
+<% cache article do %>
 
-<% item_class = article.free ? "" : "article-item--premium" %>
+  <% hide_photo ||= false %>
+  <% photo_size ||= 'medium' %>
+  <% hide_description ||= false %>
+  <% show_date ||= false %>
+  <% show_time ||= false %>
+  <% show_authors ||= false %>
+  <% show_category ||= false %>
 
-<article class="article-item <%= item_class %>">
+  <% item_class = article.free ? "" : "article-item--premium" %>
 
-  <h3><%= link_to article, article_canonical_path(article) %></h3>
+  <article class="article-item <%= item_class %>">
 
-  <% if show_date %>
-    <time class="article-item__date" datetime="<%= article.publication_date %>"><%= format_article_date article %></time>
-  <% end %>
+    <h3><%= link_to article, article_canonical_path(article) %></h3>
 
-  <% if show_time %>
-    <time class="article-item__date" datetime="<%= article.publication_date %>"><%= article.publication_date.to_s(:time) %></time>
-  <% end %>
+    <% if show_date %>
+      <time class="article-item__date" datetime="<%= article.publication_date %>">
+        <%= format_article_date article %>
+      </time>
+    <% end %>
 
-  <% if show_category && article.category %>
-    <div class="article-item__category">
-      <%= link_to article.category, url_for_category(article.category) %>
-    </div>
-  <% end %>
+    <% if show_time %>
+      <time class="article-item__date" datetime="<%= article.publication_date %>">
+        <%= article.publication_date.to_s(:time) %>
+      </time>
+    <% end %>
 
-  <% if show_authors %>
-    <%= render "articles/authors_list", article: article %>
-  <% end %>
+    <% if show_category && article.category %>
+      <div class="article-item__category">
+        <%= link_to article.category, url_for_category(article.category) %>
+      </div>
+    <% end %>
 
-  <% if !hide_description && article.description %>
-    <div class="article-item__description"><%= markdown article.description %></div>
-  <% end %>
+    <% if show_authors %>
+      <%= render "authors/list", article: article %>
+    <% end %>
 
-  <% if !hide_image && article.photo %>
-    <figure>
-      <picture>
-        <%= render 'articles/photo_sources', photo: article.photo %>
-        <img src="<%= medium_photo_cdn_url(article.photo) %>" class="lazy" alt="<%= article.photo_caption if article.photo_caption.present? %>" />
-      </picture>
-    </figure>
-  <% end %>
+    <% if !hide_description && article.description %>
+      <div class="article-item__description">
+        <%= markdown article.description %>
+      </div>
+    <% end %>
 
-</article>
+    <% if !hide_photo && article.photo %>
+      <%= render 'photos/photo', photo: article.photo, size: photo_size %>
+    <% end %>
+
+  </article>
+<% end %>
+
 ```
 
 ### Utilisation 
@@ -324,9 +330,67 @@ Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents af
     article: block.article,
     hide_description: true,
     hide_image: true,
+    image_size: small, # small | medium | large
     show_authors: true,
     show_category: true,
     show_date: true,
-    show_time: true,
+    show_time: true
     %>
+```
+
+```scss
+.article-item
+  display: flex
+  flex-direction: column
+  position: relative
+  figure
+    order: -2
+    img
+      background: $color-background-alt
+  picture
+    aspect-ratio: 16/9
+    margin-bottom: space(3)
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+  h3
+    @extend %heading-06
+    margin-bottom: 0
+    a
+      @include stretched-link
+      text-decoration: none
+      &:hover
+        color: $color-accent
+  &__description
+    @extend %body-text
+    color: $color-text-alt
+    margin-top: space(2)
+  &__authors
+    margin-top: space(3)
+    margin-bottom: space(1)
+    color: $color-text-alt
+    + .article-item__description
+      margin-top: 0
+  &__category
+    @extend %label-02-cap
+    color: $color-accent
+    order: -1
+  &--premium
+    h3
+      @include icon(t)
+  @include media-breakpoint-down(desktop)
+    flex-direction: row-reverse
+    gap: space(4)
+    flex-wrap: wrap
+    row-gap: 0
+    h3
+      flex: 1
+    figure
+      width: col(4.5)
+      picture
+        margin-bottom: 0
+    .article-item__authors
+      order: 2
 ```
