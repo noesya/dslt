@@ -465,14 +465,15 @@ with_description: #boolean
 ### Utilisation 
 
 ```html
-<%= render 'articles/article', 
-    article: block.article,
-    hide_description: true,
-    hide_image: true,
-    image_size: small, # small | medium | large
-    show_authors: true,
-    show_category: true,
-    show_date: true,
-    show_time: true
-    %>
+<%= render 'articles/teaser', 
+            article: article,
+            options: {
+              with_photo: true,
+              photo_size: 'medium',
+              with_date: true,
+              with_authors: true,
+              with_category: true,
+              with_time: true,
+              with_description: true,
+            } %>
 ```
