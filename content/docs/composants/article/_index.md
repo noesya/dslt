@@ -405,19 +405,17 @@ L'ordre des éléments et le style des titres sont gérés en fonction du contex
 “Un partiel pour les gouverner tous.“
 
 ```html {filename="app/views/sites/letemps/articles/_teaser.html.erb"}
-<%#
-Available options
-
-with_photo #boolean
-photo_size #string : small | medium | large
-with_date #boolean
-with_authors: #boolean
-with_category: #boolean
-with_time: #boolean
-with_description: #boolean
+<%
+options = {
+  photo_size: 'medium', # small | medium | large
+  with_authors: false,
+  with_category: false,
+  with_date: true,
+  with_description: false,
+  with_photo: true,
+  with_time: false
+}.merge(options || {})
 %>
-
-<% options ||= {} %>
 
 <% cache [article, options] do %>
   <% item_class = article.free ? "" : "article-item--premium" %>
@@ -444,7 +442,7 @@ with_description: #boolean
     <% end %>
 
     <% if options[:with_authors] %>
-      <%= render "authors/list", article: article %>
+      <%= render "articles/authors_list", article: article %>
     <% end %>
 
     <% if options[:with_description] && article.description %>
@@ -454,12 +452,11 @@ with_description: #boolean
     <% end %>
 
     <% if options[:with_photo] && article.photo %>
-      <%= render 'photos/photo', photo: article.photo, size: options[:photo_size] %>
+      <%= render 'photos/photo', photo: article.photo, caption: article.photo_caption, size: options[:photo_size] %>
     <% end %>
 
   </article>
 <% end %>
-
 ```
 
 ### Utilisation 
