@@ -396,3 +396,70 @@ Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents af
 ```
 
 L'ordre des éléments et le style des titres sont gérés en fonction du contexte, c'est à dire en fonction de l'endroit où le teaser est affiché.
+
+
+
+
+## Solution Bis avec Hash
+
+“Un partiel pour les gouverner tous.“
+
+```html {filename="app/views/sites/letemps/articles/_teaser.html.erb"}
+<% cache [article, options] do %>
+  <% item_class = article.free ? "" : "article-item--premium" %>
+
+  <article class="article-item <%= item_class %>">
+
+    <h3><%= link_to article, article_canonical_path(article) %></h3>
+
+    <% if options[:with_date] %>
+      <time class="article-item__date" datetime="<%= article.publication_date %>">
+        <%= format_article_date article %>
+      </time>
+    <% end %>
+
+    <% if options[:with_time] %>
+      <time class="article-item__date" datetime="<%= article.publication_date %>">
+        <%= article.publication_date.to_s(:time) %>
+      </time>
+    <% end %>
+
+    <% if options[:with_category] && article.category %>
+      <div class="article-item__category">
+        <%= link_to article.category, url_for_category(article.category) %>
+      </div>
+    <% end %>
+
+    <% if options[:with_authors] %>
+      <%= render "authors/list", article: article %>
+    <% end %>
+
+    <% if options[:with_description] && article.description %>
+      <div class="article-item__description">
+        <%= markdown article.description %>
+      </div>
+    <% end %>
+
+    <% if options[:with_photo] && article.photo %>
+      <%= render 'photos/photo', photo: article.photo, size: photo_size %>
+    <% end %>
+
+  </article>
+<% end %>
+
+```
+
+### Utilisation 
+
+```html
+<%= render 'articles/article', 
+    article: block.article,
+    hide_description: true,
+    hide_image: true,
+    image_size: small, # small | medium | large
+    show_authors: true,
+    show_category: true,
+    show_date: true,
+    show_time: true
+    %>
+```
