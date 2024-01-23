@@ -270,15 +270,15 @@ Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents af
 “Un partiel pour les gouverner tous.“
 
 ```html {filename="app/views/sites/letemps/articles/_teaser.html.erb"}
-<% cache article do %>
+<% cache [article, with_photo, photo_size, with_description, with_date, with_time, with_authors, with_category] do %>
 
-  <% hide_photo ||= false %>
+  <% with_photo ||= false %>
   <% photo_size ||= 'medium' %>
-  <% hide_description ||= false %>
-  <% show_date ||= false %>
-  <% show_time ||= false %>
-  <% show_authors ||= false %>
-  <% show_category ||= false %>
+  <% with_description ||= false %>
+  <% with_date ||= false %>
+  <% with_time ||= false %>
+  <% with_authors ||= false %>
+  <% with_category ||= false %>
 
   <% item_class = article.free ? "" : "article-item--premium" %>
 
@@ -286,35 +286,35 @@ Actuellement il y a au moins 17 fichiers partiels pour gérer ces différents af
 
     <h3><%= link_to article, article_canonical_path(article) %></h3>
 
-    <% if show_date %>
+    <% if with_date %>
       <time class="article-item__date" datetime="<%= article.publication_date %>">
         <%= format_article_date article %>
       </time>
     <% end %>
 
-    <% if show_time %>
+    <% if with_time %>
       <time class="article-item__date" datetime="<%= article.publication_date %>">
         <%= article.publication_date.to_s(:time) %>
       </time>
     <% end %>
 
-    <% if show_category && article.category %>
+    <% if with_category && article.category %>
       <div class="article-item__category">
         <%= link_to article.category, url_for_category(article.category) %>
       </div>
     <% end %>
 
-    <% if show_authors %>
+    <% if with_authors %>
       <%= render "authors/list", article: article %>
     <% end %>
 
-    <% if !hide_description && article.description %>
+    <% if with_description && article.description %>
       <div class="article-item__description">
         <%= markdown article.description %>
       </div>
     <% end %>
 
-    <% if !hide_photo && article.photo %>
+    <% if with_photo && article.photo %>
       <%= render 'photos/photo', photo: article.photo, size: photo_size %>
     <% end %>
 
